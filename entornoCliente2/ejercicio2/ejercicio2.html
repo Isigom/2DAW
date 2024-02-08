@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            // Creo una variable, y creo un objeto predefinido en la variable.
+            var fechaActual= new Date();
+
+
+            /*he creado dos arrays: uno para los nombres de los días de la semana (diaSemana) 
+            y otro para los nombres de los meses (meses). Estos arrays los utilizo ya que los métodos
+            getDay() y getMonth de un objeto date, devuelve valores numéricos. Los arrays me permiten
+            "traducir" esos valores númericos a valores no númericos. Según su posición en el array
+            me dará el String que coincida con la posición númerica..*/
+
+            var diaSemana=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+
+            /* creo otra variable e introduzco en esa variable el array con el método para que me 
+            de el día actual, por ejemplo si es domingo me dara la posicion 0 del array que equivale a domingo*/
+            var dia=diaSemana[fechaActual.getDay()];
+
+            var meses=["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+            var mes=meses[fechaActual.getMonth()];
+
+            // Para obtener la hora y los minutos
+            var horas = fechaActual.getHours();
+            var minutos=fechaActual.getMinutes();
+
+            // Para finalizar creo una variable para concatenarlo todo.
+
+            var fecha = "Hoy es " + dia + ', ' + fechaActual.getDate() + ' de ' + mes + ' de ' + fechaActual.getFullYear() + ' y son las ' + horas + ":" + minutos +' horas.';
+
+            // Finalmente muestro el resultado con un document.
+
+            document.write(fecha);
+
+        </script>
+    </body>
+</html>

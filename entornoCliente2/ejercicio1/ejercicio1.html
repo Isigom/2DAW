@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*Primero creo una variable, acto seguido creo un objeto definidos nativamente de date 
+        para realizar controles relacionados con el tiempo, y del objeto date uso el metodo getHours 
+        para que me devuelva el horario universal*/
+        
+        var horaActual = new Date().getHours();
+
+        //A continuacion utilizo la estructura condicional para segun que hora me diga , buenas dias/tardes/noches
+
+        if(horaActual>=6 && horaActual<12){
+            alert("Buenos días");
+        }
+        else if(horaActual>=12 && horaActual<20){
+            alert("Buenas tardes");
+        }
+        else
+            alert("Buenas noches");
+
+
+
+    </script>
+    
+    
+</body>
+</html>

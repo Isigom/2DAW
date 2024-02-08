@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 1 Arrays</title>
+    </head>
+
+    <body>
+        <script>
+            // Dado un array de enteros, comprobar el mayor, el menor y por último la media de todos.
+
+            // En primer lugar declaro las variables que voy a utilizar. Las inicializo en -99999,99999 y en 0.
+
+            var mayor=-99999;
+            var menor=99999;
+            var suma=0;
+
+            // creo un ejemplo de array en los que intruzco mis números enteros.
+
+            var arrayEnteros=[5,6,7,8,10,9];
+
+            //Recorro el array para encontrar el entero mayor, el menor y sumar todos.
+
+            for (var i=0; i < arrayEnteros.length; i++){
+                
+                if(arrayEnteros[i]>mayor){
+                    mayor=arrayEnteros[i];
+                }
+                
+                if(arrayEnteros[i]<menor){
+                    menor=arrayEnteros[i];
+                }
+                
+                suma=suma+arrayEnteros[i];
+            }
+
+            // Calculo la media
+
+            var media = suma/arrayEnteros.length;
+
+            // muestro los resultados
+
+            document.write("Mayor: " + mayor + "<br>");
+            document.write("Menor: " + menor + "<br>");
+            document.write("Media: " + media);
+
+        </script>
+    
+    </body>
+</html>

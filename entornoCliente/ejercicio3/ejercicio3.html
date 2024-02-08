@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 3</title>
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+       <script>
+
+        /* Realiza un script que pida números hasta que se pulse “cancelar”. 
+        Si no es un número deberá indicarse con un «alert» y seguir pidiendo. 
+        Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.*/
+        
+        var suma=0;//contador para la suma
+
+        do {
+
+            var numero = prompt("Inserta un número:");
+
+            if (Number(numero)==numero){ // Convierto mi variable en un integer para la condición
+                suma= suma + numero; // voy sumando los números introducidos
+
+            }
+
+            else if (numero!= Number(numero)&& numero!=undefined){ // si es diferente a un número y diferente a cancelar
+                
+                alert("No has introducido un número")
+
+            //Podia haber utilizado el ISNAN para saber si es un número en vez de convertir la variable.
+
+            }
+
+        } while (numero!=undefined); //bucle mientras que número sea diferente a cancelar.
+        
+        alert("Total de la suma"+" "+ suma);
+        
+            
+    
+    </script> 
+
+    
+
+
+     </body>
+
+</html>

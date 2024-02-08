@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 5</title>
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+       <script>
+
+        /*Realizar una página con un script que calcule el valor de la letra de un número de DNI 
+        (Documento nacional de indentidad).*/
+
+        do {
+            var dni = prompt("Introduce el DNI:");
+
+            /* El número debe ser entre 0 y 99999999 El RANGO ESTE NO LO HE PUESTO YA QUE SI PONIA
+                UN NÚMERO DE DOS DIGITOS, LO INTERPRETABA COMO UN DNI TAMBIÉN Y CREO QUE LOS DNI
+                TIENEN MINIMO 8 DIGITOS.*/
+
+            if(Number(dni.length)==8){
+                var resto = dni%23;
+                var letras="TRWAGMYFPDXBNJZSQVHLCKE";
+                var letra = letras.charAt(resto);
+                alert("la letra es " + letra);
+            }
+            
+            
+             if(Number(dni)!= dni || Number(dni.length) < 8){
+                alert("esto no es un DNI ¿Cual es el DNI? ");
+            }      
+             
+            //Podría haber utilizado el ISNAN para saber si es un número o no, ya que creo que es más común.
+
+        } while (dni!=undefined);
+            
+
+        
+        
+        
+        
+        
+            
+    
+        </script> 
+
+        
+    </body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reloj con JavaScript</title>
+    </head>
+    <body>
+
+        <script>
+
+            // Creo una función con la palabra reservada function para crear la función de actualizar el reloj
+            function actualizarReloj() {
+            // Obtener la fecha y hora actual
+            var fechaHora = new Date();
+
+            // Obtener componentes de la fecha y hora con el método get.
+            var horas = fechaHora.getHours();
+            var minutos = fechaHora.getMinutes();
+            var segundos = fechaHora.getSeconds();
+            var dia = fechaHora.getDate();
+            var mes = fechaHora.getMonth() +1; 
+            /* pongo +1 porque los meses empiezan de la posición 0 a 11 y me daría un mes menos 
+            si pogno +1 ya serian 12 meses*/
+            var anio = fechaHora.getFullYear();
+
+
+            /* Con un operador ternario puedo realizar la siguiente acción para que me salgan los 0 a la izquierda
+            y que quede más completo el reloj. Verifico si el valor de horas es menor que 10. Si es verdadero, 
+            se concatena un cero a la izquierda junto con el valor de horas; de lo contrario, se mantiene 
+            el valor actual de horas*/
+
+            horas = horas < 10 ? '0' + horas : horas;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            mes = mes < 10 ? '0' + mes : mes;
+  
+            // Construir la cadena de fecha y hora
+            var fechaHora = dia + '/' + mes + '/' + anio + ' ' + horas + ':' + minutos + ':' + segundos;
+
+            // Llamar a la función actualizarReloj() con la función predefinida setTimeout nuevamente después de 1000 milisegundos (1 segundo)
+            setTimeout(actualizarReloj, 1000);
+        
+            //mostrarlo con un document
+            document.body.innerHTML = fechaHora;
+            }
+
+            // Iniciar el reloj cuando la página se carga
+             actualizarReloj();
+
+        </script>
+
+
+    </body>
+</html>

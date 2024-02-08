@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 4</title>
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+       <script>
+
+        /* Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. 
+        Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.*/
+        
+        var cadenaSuma="";//contador para la cadena
+        var cadenaTexto="";
+        
+        do {
+       
+             cadenaTexto = prompt("Introduce una cadena de texto:");
+
+            if(cadenaTexto!=null){ // esto lo he puesto porque al darle a cancelar me concatenaba un null
+
+            if (cadenaSuma==""){ //si mi cadena de texto esta vacia concateno sin guión.
+                cadenaSuma= cadenaSuma + cadenaTexto; // voy sumando las cadenas de texto introducidas
+
+            }
+
+            else if (cadenaSuma!=""){  //si mi cadena de texto no esta vacia, le sumo un - a la cadena
+                cadenaSuma= cadenaSuma + "-" + cadenaTexto;
+            }
+
+        }
+        } while (cadenaTexto!=undefined); // mientras que no le de a cancelar
+        
+        alert("Cadenas de texto introducidas" + " " + cadenaSuma);
+        
+            
+    
+        </script> 
+
+        
+    </body>
+
+</html>
